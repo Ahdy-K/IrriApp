@@ -22,19 +22,19 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 const routes:Routes=[
   
   { path: '', pathMatch: 'full', redirectTo: 'home' },
-  {path:"/home", component:HomeComponent},
-  {path:"/login", component:LoginComponent},
-  {path:"/resetpassword", component:ResetpasswordComponent},
-  {path:"/register", component:CreateaccountComponent},
+  {path:"home", component:HomeComponent},
+  {path:"login", component:LoginComponent},
+  {path:"resetpassword", component:ResetpasswordComponent},
+  {path:"register", component:CreateaccountComponent},
 
-  {path:"/commandes", component:CommandsComponent},
-  {path:"/controlpage", component:ControlpageComponent},
+  {path:"commandes", component:CommandsComponent},
+  {path:"controlpage", component:ControlpageComponent},
   // Les équippements
-  {path:"/addequipment", component:AddequipmentComponent},
-  {path:"/equipementdetails/:id",component:EquipmentdetailsComponent},
-  {path:"/updateequipment/:id", component:UpdateequipmentComponent},
-  {path:"/deleteequipement/:id", component:DeleteequipmentComponent},
-  {path:"/meteo", component:MeteoComponent},
+  {path:"addequipment", component:AddequipmentComponent},
+  {path:"equipementdetails/:id",component:EquipmentdetailsComponent},
+  {path:"updateequipment/:id", component:UpdateequipmentComponent},
+  {path:"deleteequipement/:id", component:DeleteequipmentComponent},
+  {path:"meteo", component:MeteoComponent},
 
   {path:"**", component:PagenotfoundComponent}
 
