@@ -13,7 +13,32 @@ import { UpdateequipmentComponent } from './updateequipment/updateequipment.comp
 import { EquipmentdetailsComponent } from './equipmentdetails/equipmentdetails.component';
 import { MeteoComponent } from './meteo/meteo.component';
 import { CommandsComponent } from './commands/commands.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { RouterModule, Routes } from '@angular/router';
+import { DeleteequipmentComponent } from './deleteequipment/deleteequipment.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
+
+const routes:Routes=[
+  
+  { path: '', pathMatch: 'full', redirectTo: 'home' },
+  {path:"/home", component:HomeComponent},
+  {path:"/login", component:LoginComponent},
+  {path:"/resetpassword", component:ResetpasswordComponent},
+  {path:"/register", component:CreateaccountComponent},
+
+  {path:"/commandes", component:CommandsComponent},
+  {path:"/controlpage", component:ControlpageComponent},
+  // Les équippements
+  {path:"/addequipment", component:AddequipmentComponent},
+  {path:"/equipementdetails/:id",component:EquipmentdetailsComponent},
+  {path:"/updateequipment/:id", component:UpdateequipmentComponent},
+  {path:"/deleteequipement/:id", component:DeleteequipmentComponent},
+  {path:"/meteo", component:MeteoComponent},
+
+  {path:"**", component:PagenotfoundComponent}
+
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,9 +51,11 @@ import { CommandsComponent } from './commands/commands.component';
     UpdateequipmentComponent,
     EquipmentdetailsComponent,
     MeteoComponent,
-    CommandsComponent
+    CommandsComponent,
+    NavbarComponent
   ],
   imports: [
+    RouterModule.forRoot(routes),
     BrowserModule,
     AppRoutingModule
   ],
